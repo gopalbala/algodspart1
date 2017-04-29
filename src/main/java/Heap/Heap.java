@@ -44,7 +44,7 @@ public class Heap {
         while (index <= upto) {
             int leftChild = 2 * index + 1;
             int rightChild = 2 * index + 2;
-            if (index <= upto) {
+            if (leftChild <= upto) {
                 int childToSwap;
                 if (rightChild > upto)
                     childToSwap = leftChild;
@@ -68,6 +68,7 @@ public class Heap {
             int temp = heap[0];
             System.out.println(temp);
             heap[0] = heap[currentPosition - 1];
+            heap[currentPosition -i] = temp;
             fixDown(0, currentPosition - i - 1);
         }
     }
