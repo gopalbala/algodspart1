@@ -59,6 +59,8 @@ public class Heap {
                     break;
 
                 index = childToSwap;
+            } else {
+                break;
             }
         }
     }
@@ -66,9 +68,9 @@ public class Heap {
     public void heapSort() {
         for (int i = 0; i < currentPosition; i++) {
             int temp = heap[0];
-            System.out.println(temp);
-            heap[0] = heap[currentPosition - 1];
-            heap[currentPosition -i] = temp;
+            System.out.print(temp + " ");
+            heap[0] = heap[currentPosition - i];
+            heap[currentPosition - i] = temp;
             fixDown(0, currentPosition - i - 1);
         }
     }

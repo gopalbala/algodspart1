@@ -11,6 +11,6 @@ public class App {
         Heap heap = new Heap(arr.length);
         Arrays.stream(arr).forEach(x -> heap.insert(x));
         heap.heapSort();
-
+        Arrays.stream(heap.heap).forEach(System.out::print);
     }
 }
